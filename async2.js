@@ -69,8 +69,7 @@ setTimeout(() => {
 	console.log(n3);
 })();
 
-//via observables
-//rxjs.of(1,2,3).pipe(delay(1000)).subscribe(r => console.log(r));
+//observables
 const seconds = rxjs.interval(1000);
 const takeThreeNumbers = seconds.pipe(take(3), map(x => x+1))
 takeThreeNumbers.subscribe(r => console.log(r));
